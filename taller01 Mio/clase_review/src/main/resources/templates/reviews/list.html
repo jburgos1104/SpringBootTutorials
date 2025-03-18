@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Reviews</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- Mensajes de éxito o error -->
+        <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+        <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+        <h2>Reviews de Vehículos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Modelo</th>
+                    <th>Calificación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="review : ${reviews}">
+                    <td th:text="${review.id}"></td>
+                    <td th:text="${review.title}"></td>
+                    <td th:text="${review.carModel}"></td>
+                    <td th:text="${review.rating + ' ★'}"></td>
+                    <td>
+                        <a th:href="@{/reviews/{id}(id=${review.id})}" class="btn">Ver Detalles</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/reviews/}" class="btn">Volver al inicio</a>
+    </div>
+</body>
+</html>

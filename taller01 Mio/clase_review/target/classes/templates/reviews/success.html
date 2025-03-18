@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Éxito</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-success" th:text="${message}">
+        </div>
+        <a th:href="@{/reviews/list}" class="btn">Ver todas las reviews</a>
+        <a th:href="@{/reviews/}" class="btn">Volver al inicio</a>
+    </div>
+</body>
+</html>

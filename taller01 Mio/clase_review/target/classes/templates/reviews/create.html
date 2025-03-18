@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crear Review</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Crear Nueva Review</h2>
+        <form th:action="@{/reviews/create}" th:object="${review}" method="post">
+            <div class="form-group">
+                <label>Título</label>
+                <input type="text" th:field="*{title}" class="form-control">
+                <span class="error" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Modelo del Auto</label>
+                <input type="text" th:field="*{carModel}" class="form-control">
+                <span class="error" th:if="${#fields.hasErrors('carModel')}" th:errors="*{carModel}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Calificación</label>
+                <select th:field="*{rating}" class="form-control">
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+                <span class="error" th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Comentario</label>
+                <textarea th:field="*{comment}" class="form-control" rows="4"></textarea>
+                <span class="error" th:if="${#fields.hasErrors('comment')}" th:errors="*{comment}"></span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn">Guardar Review</button>
+                <a th:href="@{/reviews/}" class="btn">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

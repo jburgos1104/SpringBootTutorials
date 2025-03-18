@@ -1,0 +1,8 @@
+Inicialmente, para poder ejecutar el proyecto, se deben crear 2 contenedores en Docker, uno para el phpmyadmin y otro para la base de datos.
+El archivo application.properties debe ser modificado con su usuario y contraseña de phpmyadmin, además de la url para la conexión con la base de datos.
+
+Luego, a la hora de ejecutar el proyecto con el comando mvn spring-boot:run debes tener en cuenta que todas las rutas comienzan con /reviews
+por lo que, para probar cada una de las rutas debes incluir esto al inicio de cada una.
+
+Cuando ya haya comprimido el .zip, tenga en cuenta que debe acceder a la carpeta clase_review que está dentro de la carpeta Taller01
+

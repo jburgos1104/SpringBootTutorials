@@ -1,0 +1,137 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo negro */
+    color: white; /* Texto blanco */
+}
+
+/* Contenedores principales */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Fondo gris oscuro */
+    border-radius: 8px;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: #D32F2F; /* Rojo oscuro */
+}
+
+/* Botones */
+.btn {
+    background-color: #D32F2F !important; /* Rojo oscuro */
+    border-color: #D32F2F !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #B71C1C !important; /* Rojo más oscuro */
+    border-color: #B71C1C !important;
+    color: white !important;
+}
+
+.btn-secondary {
+    background-color: black !important;
+    border-color: black !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2px 8px !important;
+    line-height: 1 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #333 !important; /* Negro más claro */
+    border-color: #333 !important;
+    color: white !important;
+}
+
+/* Formulario */
+form {
+    background: #1E1E1E; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #D32F2F; /* Borde rojo */
+}
+
+/* Campos de entrada */
+input, textarea {
+    color: white;
+    background-color: #333; /* Fondo gris oscuro */
+    border: 1px solid #D32F2F; /* Borde rojo */
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Placeholder */
+input::placeholder, textarea::placeholder {
+    color: #bbb; /* Gris claro */
+}
+
+/* Estilo de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #D32F2F;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #D32F2F;
+}
+
+/* Asegurar que todos los textos sean blancos */
+p, span, li, td {
+    color: white !important;
+}
+
+/* Lista de items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Mejoras en los recuadros de los items */
+.item-box {
+    background-color: #1E1E1E;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #D32F2F; /* Borde rojo */
+    color: white;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.5); /* Sombra roja */
+    transition: all 0.2s ease-in-out;
+}
+
+.item-box:hover {
+    transform: scale(1.03);
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(183, 28, 28, 0.8);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    margin-top: 20px;
+}
+form:has(.btn-danger) {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+

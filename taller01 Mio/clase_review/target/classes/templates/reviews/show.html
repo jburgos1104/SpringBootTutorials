@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalles de Review</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Detalles de la Review</h2>
+        <div>
+            <p><strong>ID:</strong> <span th:text="${review.id}"></span></p>
+            <p><strong>Título:</strong> <span th:text="${review.title}"></span></p>
+            <p><strong>Modelo del Auto:</strong> <span th:text="${review.carModel}"></span></p>
+            <p><strong>Calificación:</strong> <span th:text="${review.rating + ' ★'}"></span></p>
+            <p><strong>Comentario:</strong></p>
+            <p th:text="${review.comment}"></p>
+        </div>
+        
+        <div class="button-group">
+            <form th:action="@{/reviews/{id}/delete(id=${review.id})}" method="post" style="display: inline;">
+                <button type="submit" class="btn btn-danger" 
+                        onclick="return confirm('¿Estás seguro de eliminar esta review?')">
+                    Eliminar Review
+                </button>
+            </form>
+            <a th:href="@{/reviews/list}" class="btn">Volver a la lista</a>
+        </div>
+    </div>
+</body>
+</html>

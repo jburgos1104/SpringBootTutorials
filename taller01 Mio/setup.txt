@@ -1,0 +1,29 @@
+--REQUISITOS PARA EJECUTAR--
+
+- JDK 21 (Java Development Kit)
+- Maven (Para manejar dependencias)
+- Docker (Para la base de datos MySQL)
+
+Ejecuta los siguientes comandos en la terminal para levantar MySQL y phpMyAdmin(recuerda la sintaxis si es PS o CMD):
+
+docker network create mynetwork
+
+docker run -d \
+--name mysql-container \
+--network mynetwork \
+-e MYSQL_ROOT_PASSWORD=Medellin1104 \
+-e MYSQL_DATABASE=taller01 \
+-p 3306:3306 \
+mysql:latest
+
+docker run -d \
+--name phpmyadmin-container \
+--network mynetwork \
+-e PMA_HOST=mysql-container \
+-e PMA_PORT=3306 \
+-p 8081:80 \
+phpmyadmin/phpmyadmin:latest
+
+O si prefieres crear otro password o nombre de tabla, lo que sea, recuerda que debes cambiarlo en el los archivos como por ejemplo el password
+en el application.properties
+
