@@ -1,0 +1,9 @@
+com\tutorial12\tutorial12\model\Product.class
+com\tutorial12\tutorial12\dto\ProductCollection.class
+com\tutorial12\tutorial12\controller\ProductControllerV3.class
+com\tutorial12\tutorial12\dto\ProductDTO.class
+com\tutorial12\tutorial12\controller\ProductControllerV2.class
+com\tutorial12\tutorial12\config\CorsConfig.class
+com\tutorial12\tutorial12\controller\ProductController.class
+com\tutorial12\tutorial12\Tutorial12Application.class
+com\tutorial12\tutorial12\dto\ProductCollection$AdditionalData.class
